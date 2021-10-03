@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(217deg, #78f878, #78f87800 70.71%),
+                linear-gradient(127deg, #55a4ff, #55a4ff00 70.71%),
+                linear-gradient(336deg, #9e88ff, #9e88ff00 70.71%);
+}
+
+.title{
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 5vw;
+    padding: .6em;
+}
+
+.weel-container{
+    margin: 0 auto;
+    width: 90%;
+    height: 75vh;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.traingle{
+    margin: auto;
+    width: 30px;
+    height: 20px;
+    background: #aaa;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.weel{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 4rem;
+    font-weight: 600;
+    height: 85%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    color: #fff;
+    transition: transform 3s;
+}
+
+.weel.spin{
+    transform: rotate(360deg);
+}
+
+.part1{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(175, 247, 168);
+}
+
+.part2{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(167, 150, 216);
+    transform: rotate(180deg);
+}
+
+.spin-btn{
+    cursor: pointer;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 90%;
+    padding: .5em 1.5em;
+    margin-top: 5px;
+    color: rgb(83, 93, 240);
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: opacity 1s;
+}
+
+@media screen and (min-width: 750px){
+    .title{
+        font-size: 3vw;
+    }
+
+    .weel-container{
+        width: 60%;
+    }
+
+    .spin-btn{
+        width: 60%;
+    }
+}
